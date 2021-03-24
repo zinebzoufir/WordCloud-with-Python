@@ -17,7 +17,7 @@ try:
     if len(txt)==0:
         raise ValueError("Empty text")
 except ValueError:
-    print("Please enter your text! We can't generate your WordCloud with no words!")
+    'Please enter your text! We can not generate your WordCloud with no words'
 else:
     ma=np.array(Image.open(path.join("C:\\Users\\lenovo\\Desktop\\WORDCLOUD-MASK\\ppWhite.png")))
     word=WordCloud(width=wid,height=hei,margin=0,background_color=color,mask=ma,contour_width=0.5).generate(txt)
