@@ -81,12 +81,9 @@ l = pd.DataFrame({'l': ['Simple', 'Shaped']})
 st.sidebar.markdown(
     "<h2 style='font-style: italic; font-size: medium'>Do you want your wordcloud to have a certain shape?"
     "</h2>", unsafe_allow_html=True)
-logo = st.sidebar.selectbox("", l)
+logo = st.sidebar.selectbox(" ", l)
 if logo == 'Shaped':
-    st.sidebar.markdown(
-    "<h2 style='font-style: italic; font-size: medium'>Do you want your wordcloud to have a contour?"
-    "</h2>", unsafe_allow_html=True)
-    contour = st.sidebar.radio(" ", ["Yes", "No"])
+    contour = st.sidebar.radio("Do you want your cloud to have a contour? ", ["Yes", "No"])
     if contour == "Yes":
         cd = 0.5
         cd_c = st.sidebar.color_picker("Pick a color for your contour")
