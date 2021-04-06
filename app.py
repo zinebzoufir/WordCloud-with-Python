@@ -133,7 +133,7 @@ else:
         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc,
                          color_func=lambda *args, **kwargs: c).generate(txt)
     word.to_file('wordcld.png')
-    st.subheader.markdown("\n__Here is your wordcloud :__")
+    st.markdown("\n__Here is your wordcloud :__")
     image = Image.open('wordcld.png')
     st.image(image, caption='Your customized wordcloud')
     st.markdown("____")
