@@ -5,6 +5,18 @@ from os import path
 from wordcloud import WordCloud
 import numpy as np
 
+def get_image_download_link(img):
+	"""Generates a link allowing the PIL image to be downloaded
+	in:  PIL image
+	out: href string
+	"""
+	buffered = BytesIO()
+	img.save(buffered, format="PNG")
+	img_str = base64.b64encode(buffered.getvalue()).decode()
+	href = f'<a href="data:file/jpg;base64,{img_str}">Download result</a>'
+	return href
+
+st.markdown(get_image_download_link(result), unsafe_allow_html=True)
 # Header section
 Header_html = """
     <style>
@@ -135,7 +147,7 @@ else:
     word.to_file('wordcld.png')
     st.markdown("\n__Here is your wordcloud :__")
     image = Image.open('wordcld.png')
-    st.image(image, caption='Your customized wordcloud')
+    st.image(image, caption='Your customized wordcloud', format='PNG')
     st.markdown("____")
     
 # About Us Section
