@@ -83,7 +83,10 @@ st.sidebar.markdown(
     "</h2>", unsafe_allow_html=True)
 logo = st.sidebar.selectbox("", l)
 if logo == 'Shaped':
-    contour = st.sidebar.radio("Do you want your word cloud to have a contour?", ["Yes", "No"])
+    st.sidebar.markdown(
+    "<h2 style='font-style: italic; font-size: medium'>Do you want your wordcloud to have a contour?"
+    "</h2>", unsafe_allow_html=True)
+    contour = st.sidebar.radio(" ", ["Yes", "No"])
     if contour == "Yes":
         cd = 0.5
         cd_c = st.sidebar.color_picker("Pick a color for your contour")
@@ -94,7 +97,10 @@ if logo == 'Shaped':
 t = pd.DataFrame({'s': ['enter a text', 'upload a file']})
 
 # text input
-Place_holder = st.sidebar.selectbox("how do you want to submit the text ?", t)
+st.sidebar.markdown(
+    "<h2 style='font-style: italic; font-size: medium'>how do you want to submit the text ?"
+    "</h2>", unsafe_allow_html=True)
+Place_holder = st.sidebar.selectbox(" ", t)
 if Place_holder == 'enter a text':
     txt = st.sidebar.text_area("enter your text here")
 else:
