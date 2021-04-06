@@ -133,9 +133,24 @@ else:
         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc,
                          color_func=lambda *args, **kwargs: c).generate(txt)
     word.to_file('wordcld.png')
-    st.subheader("\nHere is your wordcloud :")
-    image = Image.open('wordcld.png')
-    st.image(image, caption='Your customized wordcloud')
+    Result_html = """
+    <style>
+        h1 {
+            text-align: center;
+            font-size: small;
+            }
+        img {
+            margin-top: 15px; 
+            margin-bottom: 15px; 
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%
+            }
+    </style>
+    <h1>Here is your wordcloud :</h1>
+    <img src='wordcld.png' alt='worcloud' width='350 height='250'>
+    """
+    st.markdown(Result_html, unsafe_allow_html=True)
     st.markdown("____")
 
 # About Us Section
