@@ -167,7 +167,6 @@ information_html = """
     Click here to view our web app's code! </a>
 """
 information.markdown(information_html, unsafe_allow_html=True)
-st.markdown("----")
 Ratings_html="""
 <style>
     .rating {
