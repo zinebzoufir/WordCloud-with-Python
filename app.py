@@ -167,3 +167,27 @@ information_html = """
     Click here to view our web app's code! </a>
 """
 information.markdown(information_html, unsafe_allow_html=True)
+st.markdown("----")
+Ratings_html="""
+<style>
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+    .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+    }
+    .rating > span:hover:before,
+    .rating > span:hover ~ span:before {
+        content: "\2605";
+        position: absolute;
+    }
+</style>
+<div>We would really appreciate it if you can rate our web app!</div>
+<div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div>
+"""
+st.markdown(Ratings_html, unsafe_allow_html=True)
