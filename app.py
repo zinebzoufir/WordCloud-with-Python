@@ -142,6 +142,7 @@ else:
 # About Us Section
 information = st.beta_expander("About Us", False)
 information_html = """
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
     div {
         font-family: "Gill Sans", sans-serif; 
@@ -153,12 +154,12 @@ information_html = """
     }
     </style>
     <div>We are INPT first year students :
-        <ul>
-            <li><a>Chadli Wiam</a></li>
-            <li><a>Zoufir Zineb</a></li>
-            <li><a>Hammani Latifa</a></li>
-            <li><a>Allam Laila</a></li>
-            <li><a>Laaqira Chaima</a></li>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-check-square"></i>Chadli Wiam</li>
+            <li><i class="fa-li fa fa-check-square"></i>Zoufir Zineb</li>
+            <li><i class="fa-li fa fa-check-square"></i>Hammani Latifa</li>
+            <li><i class="fa-li fa fa-check-square"></i>Allam Laila</li>
+            <li><i class="fa-li fa fa-check-square"></i>Laaqira Chaima</li>
         </ul>
     </div>
     <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150' style='margin-top:10px; margin-bottom: 10px'>
