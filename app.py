@@ -84,18 +84,20 @@ st.sidebar.markdown(
     "</h2>", unsafe_allow_html=True)
 logo = st.sidebar.selectbox(" ", l)
 if logo == 'Shaped':
+     z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse', 'Heart', 'Logo Inpt']})
+    ma = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
+    if ma == 'Cloud':
+        ma = np.array(Image.open(path.join("cloud.png")))
+    elif ma == 'Circle':
+        ma = np.array(Image.open(path.join("cercle.png")))
+    elif ma == 'Mickey-Mouse':
+        ma = np.array(Image.open(path.join("mickey-mouse.png")))
+    elif ma == 'Heart':
+        ma = np.array(Image.open(path.join("coeur.png")))
+    else:
+        ma = np.array(Image.open(path.join("mpt.png")))
     contour = st.sidebar.radio("Do you want your word cloud to have a contour?", ["Yes", "No"])
     if contour == "Yes":
-        z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse','Heart']})
-        ch = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
-        if ch == 'Cloud':
-            ma = np.array(Image.open(path.join("cloud.png")))
-        elif ch == 'Circle':
-            ma = np.array(Image.open(path.join("cercle.png")))
-        elif ch == 'Mickey-Mouse':
-            ma = np.array(Image.open(path.join("mickey-mouse.png")))
-        else :
-            ma = np.array(Image.open(path.join("coeur.png")))
         cd = 0.5
         cd_c = st.sidebar.color_picker("Pick a color for your contour")
     else:
@@ -131,17 +133,15 @@ try:
 except ValueError:
     ''
 else:
-    if val is True and logo == 'Shaped':
+    if val == True and logo== 'Shaped' :
         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc, mask=ma, contour_width=cd,
-                         color_func=lambda *args, **kwargs: c, contour_color=cd_c).generate(txt)
-    elif val is False and logo == 'Shaped':
-        word = WordCloud(width=wid, height=hei, margin=0, background_color=bc, mask=ma, contour_width=cd,
-                         contour_color=cd_c).generate(txt)
-    elif val is False and logo == 'Simple':
-        word = WordCloud(width=wid, height=hei, margin=0, background_color=bc).generate(txt)
+                         color_func=lambda *args, **kwargs: c,contour_color=cd_c).generate(txt)
+    elif val == False and logo == 'Shaped' :
+         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc, mask=ma, contour_width=cd,contour_color=cd_c).generate(txt)
+    elif val == False and logo == 'Simple' :
+         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc).generate(txt)
     else:
-        word = WordCloud(width=wid, height=hei, margin=0, background_color=bc,
-                         color_func=lambda *args, **kwargs: c).generate(txt)
+         word =WordCloud(width=wid, height=hei, margin=0, background_color=bc,color_func=lambda *args, **kwargs: c).generate(txt)
     word.to_file('wordcld.png')
     st.markdown("\n__Here is your wordcloud :__")
     image = Image.open('wordcld.png')
