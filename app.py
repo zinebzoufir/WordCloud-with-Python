@@ -84,12 +84,22 @@ st.sidebar.markdown(
     "</h2>", unsafe_allow_html=True)
 logo = st.sidebar.selectbox(" ", l)
 if logo == 'Shaped':
-    contour = st.sidebar.radio("Do you want your cloud to have a contour? ", ["Yes", "No"])
+    contour = st.sidebar.radio("Do you want your word cloud to have a contour?", ["Yes", "No"])
     if contour == "Yes":
+        z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse','Heart']})
+        ma = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
+        if ma == 'Cloud':
+            ma = np.array(Image.open(path.join("cloud.png")))
+        elif ma == 'Circle':
+            ma = np.array(Image.open(path.join("cercle.png")))
+        elif ma == 'Mickey-Mouse':
+            ma = np.array(Image.open(path.join("mickey-mouse.png")))
+        else :
+            ma = np.array(Image.open(path.join("coeur.png")))
         cd = 0.5
         cd_c = st.sidebar.color_picker("Pick a color for your contour")
     else:
-        cd = 0.0
+        cd = 0
         cd_c = None
 
 t = pd.DataFrame({'s': ['enter a text', 'upload a file']})
