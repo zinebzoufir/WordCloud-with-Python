@@ -192,6 +192,7 @@ information.markdown(information_html, unsafe_allow_html=True)
 #Rating Section
 Ratings_html="""
 <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     div {
         font-family: "Gill Sans", sans-serif; 
         font-size: medium;
