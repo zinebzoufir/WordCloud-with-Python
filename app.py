@@ -157,6 +157,8 @@ information_html = """
     div {
         font-family: "Gill Sans", sans-serif; 
         font-size: medium;
+        color: #6C9ADC;
+        margin: 10px;
         }
     .fa_ul {
         color: #92B2DF;
@@ -200,7 +202,7 @@ information_html = """
    </style>
 
     <div>This WordCloud Web Application is the work of five dedicated students 
-    at the National Institue of Posts and Telecommunications: 
+    at the National Institue of Posts and Telecommunications under the supervision of Professor Omar Souissi: 
         <ul class="fa-ul">
             <li><i class="fa-li fa fa-check-square"></i>Chadli Wiam</li>
             <li><i class="fa-li fa fa-check-square"></i>Zoufir Zineb</li>
@@ -208,14 +210,13 @@ information_html = """
             <li><i class="fa-li fa fa-check-square"></i>Allam Laila</li>
             <li><i class="fa-li fa fa-check-square"></i>Laaqira Chaima</li>
         </ul>
-    Under the supervision of Professor Omar Souissi
     </div>
+    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page'
+     style='color: #6C9ADC; text-decoration: None; text-align: center; padding: 10px;'>
+    Click here to view our web app's code! </a>
     <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150'
     style='margin-top:10px; margin-bottom: 10px'>
-    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page'
-     style='color: #EE057A; text-decoration: None; text-align: center'>
-    Click here to view our web app's code! </a>
-    <span style="text-align: center; color: #FFB300; font-style: italic;" > Please take some time to rate our web application! </span>
+    <div style="text-align: center; color: #FFB300; font-style: italic; padding: 10px" > Please take some time to rate our web application! </div>
     <div class="star-rating">
       <div class="star-rating__wrap">
         <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
