@@ -152,7 +152,7 @@ else:
 # About Us Section
 information = st.beta_expander("About Us", False)
 information_html = """
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     div {
         font-family: "Gill Sans", sans-serif; 
@@ -167,9 +167,40 @@ information_html = """
          margin-right: auto;
          width: 50%;
         }
+    .star-rating{
+        font-size: 0;
+    }   
+    .star-rating__wrap{
+        display: inline-block;
+        font-size: 1rem;
+    }
+    .star-rating__wrap:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .star-rating__ico{
+        float: right;
+        padding-left: 2px;
+        cursor: pointer;
+        color: #FFB300;
+    }   
+    .star-rating__ico:last-child{
+        padding-left: 0;
+    }
+    .star-rating__input{
+        display: none;
+    }
+    .star-rating__ico:hover:before,
+    .star-rating__ico:hover ~ .star-rating__ico:before,
+    .star-rating__input:checked ~ .star-rating__ico:before
+    {
+        content: "\\f005";
+    }
    </style>
-    
-    <div>We are INPT first year students :
+
+    <div>This WordCloud Web Application is the work of five dedicated students 
+    at the National Institue of Posts and Telecommunications: 
         <ul class="fa-ul">
             <li><i class="fa-li fa fa-check-square"></i>Chadli Wiam</li>
             <li><i class="fa-li fa fa-check-square"></i>Zoufir Zineb</li>
@@ -177,24 +208,29 @@ information_html = """
             <li><i class="fa-li fa fa-check-square"></i>Allam Laila</li>
             <li><i class="fa-li fa fa-check-square"></i>Laaqira Chaima</li>
         </ul>
+    Under the supervision of Professor Omar Souissi
     </div>
-    <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150' style='margin-top:10px; margin-bottom: 10px'>
-    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page' style='color: #EE057A; text-decoration: None'>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150'
+    style='margin-top:10px; margin-bottom: 10px'>
+    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page'
+     style='color: #EE057A; text-decoration: None; text-align: center'>
     Click here to view our web app's code! </a>
+    <span style="text-align: center; color: #FFB300; font-style: italic;" > Please take some time to rate our web application! </span>
+    <div class="star-rating">
+      <div class="star-rating__wrap">
+        <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
+        <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
+      </div>
+    </div>
 """
 information.markdown(information_html, unsafe_allow_html=True)
-Ratings_html="""
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<style>
-  .checked {
-        color: orange;
-    }  
-</style>
-<div>We would really appreciate it if you can rate our web app!</div>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
-"""
-st.markdown(Ratings_html, unsafe_allow_html=True)
+
+
