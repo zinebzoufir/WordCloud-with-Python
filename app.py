@@ -168,7 +168,12 @@ information_html = """
          margin-right: auto;
          width: 50%;
         }
-    
+    a {
+        color: #6C9ADC; 
+        text-decoration: None; 
+        text-align: center; 
+        padding: 10px;
+    }
    </style>
 
     <div>This WordCloud Web Application is the work of five dedicated students 
@@ -183,16 +188,14 @@ information_html = """
     </div>
     <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150'
     style='margin-top:10px; margin-bottom: 10px'>
-    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page'
-     style='color: #6C9ADC; text-decoration: None; text-align: center; padding: 10px;'>
-    Click here to view our web app's code! </a>
+    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page>Click here to view our web app's code! </a>
 """
 information.markdown(information_html, unsafe_allow_html=True)
 
 #Rating Section
 Ratings_html="""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     div {
         font-family: "Gill Sans", sans-serif; 
         font-size: medium;
