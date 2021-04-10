@@ -131,7 +131,6 @@ try:
 except ValueError:
     ''
 else:
-    ma = np.array(Image.open(path.join("inpt.png")))
     if val is True and logo == 'Shaped':
         word = WordCloud(width=wid, height=hei, margin=0, background_color=bc, mask=ma, contour_width=cd,
                          color_func=lambda *args, **kwargs: c, contour_color=cd_c).generate(txt)
