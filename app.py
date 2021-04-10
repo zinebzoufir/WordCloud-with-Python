@@ -188,7 +188,7 @@ information_html = """
     </div>
     <img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo_inpt.PNG' alt='Logo Inpt' width='250 height='150'
     style='margin-top:10px; margin-bottom: 10px'>
-    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page>Click here to view our web app's code! </a>
+    <a href='https://github.com/WiamChadli00/ProjetPythonSouissi.git' target='_blank' title='Github Page'>Click here to view our web app's code! </a>
 """
 information.markdown(information_html, unsafe_allow_html=True)
 
