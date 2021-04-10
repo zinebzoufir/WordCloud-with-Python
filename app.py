@@ -168,25 +168,17 @@ information_html = """
 """
 information.markdown(information_html, unsafe_allow_html=True)
 Ratings_html="""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    .rating {
-        unicode-bidi: bidi-override;
-        direction: rtl;
-    }
-    .rating > span {
-        display: inline-block;
-        position: relative;
-        width: 1.1em;
-    }
-    .rating > span:hover:before,
-    .rating > span:hover ~ span:before {
-        content: "\2605";
-        position: absolute;
+    .checked {
+        color: orange;
     }
 </style>
 <div>We would really appreciate it if you can rate our web app!</div>
-<div class="rating">
-<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-</div>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
 """
 st.markdown(Ratings_html, unsafe_allow_html=True)
