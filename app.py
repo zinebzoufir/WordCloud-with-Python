@@ -147,12 +147,18 @@ information_html = """
     div {
         font-family: "Gill Sans", sans-serif; 
         font-size: medium;
+        }
+    .fa_ul {
         color: #92B2DF;
     }
     img {
-        float: right;
-    }
-    </style>
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+        }
+   </style>
+    
     <div>We are INPT first year students :
         <ul class="fa-ul">
             <li><i class="fa-li fa fa-check-square"></i>Chadli Wiam</li>
@@ -168,11 +174,11 @@ information_html = """
 """
 information.markdown(information_html, unsafe_allow_html=True)
 Ratings_html="""
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
 <style>
-    .checked {
+  .checked {
         color: orange;
-    }
+    }  
 </style>
 <div>We would really appreciate it if you can rate our web app!</div>
 <span class="fa fa-star checked"></span>
