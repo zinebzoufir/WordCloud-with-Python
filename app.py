@@ -87,12 +87,12 @@ if logo == 'Shaped':
     contour = st.sidebar.radio("Do you want your word cloud to have a contour?", ["Yes", "No"])
     if contour == "Yes":
         z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse','Heart']})
-        ma = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
-        if ma == 'Cloud':
+        ch = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
+        if ch == 'Cloud':
             ma = np.array(Image.open(path.join("cloud.png")))
-        elif ma == 'Circle':
+        elif ch == 'Circle':
             ma = np.array(Image.open(path.join("cercle.png")))
-        elif ma == 'Mickey-Mouse':
+        elif ch == 'Mickey-Mouse':
             ma = np.array(Image.open(path.join("mickey-mouse.png")))
         else :
             ma = np.array(Image.open(path.join("coeur.png")))
