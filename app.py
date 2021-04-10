@@ -84,7 +84,7 @@ st.sidebar.markdown(
     "</h2>", unsafe_allow_html=True)
 logo = st.sidebar.selectbox(" ", l)
 if logo == 'Shaped':
-     z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse', 'Heart', 'Logo Inpt']})
+    z = pd.DataFrame({'z': ['Cloud', 'Circle', 'Mickey-Mouse', 'Heart', 'Logo Inpt']})
     ma = st.sidebar.selectbox("Choose a shape for your wordcloud", z)
     if ma == 'Cloud':
         ma = np.array(Image.open(path.join("cloud.png")))
