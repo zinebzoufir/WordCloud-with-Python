@@ -169,7 +169,7 @@ information_html = """
          width: 50%;
         }
     a {
-        color: #6C9ADC; 
+        color: blue; 
         text-decoration: None; 
         text-align: center; 
         padding: 10px;
