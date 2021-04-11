@@ -70,7 +70,7 @@ else:
 
 # color palette for contour
 st.sidebar.markdown("----")
-st.sidebar.markdown("<h2 style='font-style: italic; font-size: medium'>Choose the height in px</h2>",
+st.sidebar.markdown("<h2 style='font-style: italic; font-size: medium'>Choose the width in px</h2>",
                     unsafe_allow_html=True)
 wid = st.sidebar.slider("Width", 0, 400, 1000)
 st.sidebar.markdown("<h2 style='font-style: italic; font-size: medium'>Choose the height in px</h2>",
@@ -108,11 +108,11 @@ t = pd.DataFrame({'s': ['enter a text', 'upload a file']})
 
 # text input
 st.sidebar.markdown(
-    "<h2 style='font-style: italic; font-size: medium'>how do you want to submit the text ?"
+    "<h2 style='font-style: italic; font-size: medium'>How do you want to submit the text ?"
     "</h2>", unsafe_allow_html=True)
 Place_holder = st.sidebar.selectbox(" ", t)
 if Place_holder == 'enter a text':
-    txt = st.sidebar.text_area("enter your text here")
+    txt = st.sidebar.text_area("Enter your text here")
 else:
     #  fichier = st.sidebar.file_uploader('test',type='txt',accept_multiple_files=False)
     uploaded_file = st.sidebar.file_uploader("Choose a file")
