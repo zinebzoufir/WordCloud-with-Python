@@ -114,8 +114,7 @@ Place_holder = st.sidebar.selectbox(" ", t)
 if Place_holder == 'enter a text':
     txt = st.sidebar.text_area("Enter your text here")
 else:
-    #  fichier = st.sidebar.file_uploader('test',type='txt',accept_multiple_files=False)
-    uploaded_file = st.sidebar.file_uploader("Choose a file")
+    uploaded_file = st.sidebar.file_uploader("Choose a file", type='txt',accept_multiple_files=False )
     try:
         txt = uploaded_file.getvalue().decode("utf-8")
     except AttributeError:
