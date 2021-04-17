@@ -47,7 +47,7 @@ st.markdown("____")
 # empty slot to use later for the wordcloud
 empty_place = st.empty()
 
-# User input
+# Configurations
 st.sidebar.markdown("<h1 style='font-weight: bold; text-align: center'>Configurations</h1>",
                     unsafe_allow_html=True)
 st.sidebar.markdown("<h2 style='font-size: 15px; text-align: center; font-style: italic'>"
@@ -72,10 +72,11 @@ else:
 st.sidebar.markdown("----")
 st.sidebar.markdown("<h2 style='font-style: italic; font-size: medium'>Choose the width in px</h2>",
                     unsafe_allow_html=True)
-wid = st.sidebar.slider("Width", 0, 400, 1000)
+wid = st.sidebar.slider("Width", 400, 1000)
 st.sidebar.markdown("<h2 style='font-style: italic; font-size: medium'>Choose the height in px</h2>",
                     unsafe_allow_html=True)
-hei = st.sidebar.slider("Height", 0, 400, 1000)
+hei = st.sidebar.slider("Height", 400, 1000)
+
 
 # Choosing between mask or no mask :
 l = pd.DataFrame({'l': ['Simple', 'Shaped']})
